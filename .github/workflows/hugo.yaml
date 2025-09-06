@@ -20,9 +20,11 @@ jobs:
 
       - name: Build
         run: hugo --minify
+        working-directory: ./blog/my-blog
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          github_token: ${{ secrets.PAT_TOKEN }}  # Use your PAT here
+          publish_dir: ./blog/my-blog/public
+          publish_branch: main
