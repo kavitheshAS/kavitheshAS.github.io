@@ -1,0 +1,30 @@
+baseURL = "https://kavitheshAS.github.io/"
+languageCode = "en-us"
+title = "CarbamideSandwich Blogs"
+theme = "poison"
+pluralizelisttitles = false
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  brand = "CarbamideSandwich"
+  description = "Personal blog about systems, programming, and more."
+  dark_mode = true
+  front_page_content = ["posts"]
+  menu = [
+    {Name = "About", URL = "/about/", HasChildren = false},
+    {Name = "Posts", URL = "/posts/", Pre = "Recent", HasChildren = true, Limit = 5},
+  ]
+  github_url = "https://github.com/kavitheshAS"
+  rss_icon = true
+  rss_section = "posts"
+
+[Languages]
+  [Languages.en]
+    languageName = "English"
+    weight = 1
+    [Languages.en.params]
+      [Languages.en.params.author]
+        name = "Kavithesh A.S."
+        bio = "Systems programming enthusiast"
